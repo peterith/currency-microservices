@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.peterith.currencymicroservices</groupId>
-	<artifactId>currency-exchange-services</artifactId>
+	<artifactId>currency-exchange-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>currency-exchange-services</name>
+	<name>currency-exchange-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

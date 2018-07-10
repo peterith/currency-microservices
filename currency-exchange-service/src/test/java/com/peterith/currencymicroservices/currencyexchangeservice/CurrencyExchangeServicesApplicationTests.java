@@ -1,4 +1,4 @@
-package com.peterith.currencymicroservices.currencyexchangeservices;
+package com.peterith.currencymicroservices.currencyexchangeservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

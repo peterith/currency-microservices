@@ -1,4 +1,4 @@
-package com.peterith.currencymicroservices.currencyexchangeservices;
+package com.peterith.currencymicroservices.currencyexchangeservice;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
