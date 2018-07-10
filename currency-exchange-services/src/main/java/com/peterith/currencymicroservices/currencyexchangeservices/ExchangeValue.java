@@ -1,4 +1,4 @@
-package com.peterith.microservicesdemo.currencyexchangeservices;
+package com.peterith.currencymicroservices.currencyexchangeservices;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

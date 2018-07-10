@@ -1,4 +1,4 @@
-package com.peterith.microservicesdemo.currencyexchangeservices;
+package com.peterith.currencymicroservices.currencyexchangeservices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
