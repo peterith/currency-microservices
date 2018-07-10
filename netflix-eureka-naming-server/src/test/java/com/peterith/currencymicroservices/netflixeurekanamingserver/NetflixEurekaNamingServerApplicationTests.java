@@ -1,4 +1,4 @@
-package com.peterith.microservicesdemo.netflixeurekanamingserver;
+package com.peterith.currencymicroservices.netflixeurekanamingserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
