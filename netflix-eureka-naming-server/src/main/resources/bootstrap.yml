@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: netflix-eureka-naming-server
+  cloud:
+    config:
+      uri: http://localhost:8888
