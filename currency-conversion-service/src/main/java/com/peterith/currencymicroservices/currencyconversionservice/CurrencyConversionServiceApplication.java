@@ -10,7 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @EnableDiscoveryClient
 @EnableCircuitBreaker
-@EnableHystrixDashboard
 @SpringBootApplication
 public class CurrencyConversionServiceApplication {
 
