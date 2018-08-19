@@ -29,8 +29,8 @@ public class CurrencyExchangeControllerTests {
 	@Autowired
 	private MockMvc mockMvc;
 
-	String from = "EUR";
-	String to = "INR";
+	private final String from = "EUR";
+	private final String to = "INR";
 
 	@Test
 	public void shouldReturnNotFoundStatusWhenExchangeValueNotFound() throws Exception {
