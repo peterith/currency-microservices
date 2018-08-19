@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -29,6 +30,9 @@ public class CurrencyExchangeControllerTests {
 	@Autowired
 	private MockMvc mockMvc;
 
+	@Autowired
+	Environment environment;
+
 	private final String from = "EUR";
 	private final String to = "INR";
 
@@ -41,7 +45,7 @@ public class CurrencyExchangeControllerTests {
 	}
 
 	@Test
-	public void shouldReturnExchangeValueWrappedInData() throws Exception {
+	public void shouldReturnExchangeValueFromService() throws Exception {
 		ExchangeValue exchangeValue = buildExchangeValue();
 		when(currencyExchangeService.findByFromAndTo(from, to)).thenReturn(Optional.of(exchangeValue));
 		mockMvc.perform(get("/currency-exchange/from/" + from + "/to/" + to))
@@ -51,15 +55,15 @@ public class CurrencyExchangeControllerTests {
 				.andExpect(jsonPath("from").value(from))
 				.andExpect(jsonPath("to").value(to))
 				.andExpect(jsonPath("conversionMultiple").value(100.00))
-				.andExpect(jsonPath("port").value(80));
+				.andExpect(jsonPath("port").value(environment.getProperty("server.port")));
 	}
 
 	private ExchangeValue buildExchangeValue() {
-		return ExchangeValue.builder().id(1000L)
+		return ExchangeValue.builder()
+				.id(1000L)
 				.from(from)
 				.to(to)
 				.conversionMultiple(new BigDecimal(100))
-				.port(80)
 				.build();
 	}
 }

@@ -12,7 +12,7 @@ public class CurrencyExchangeController {
 
     private final CurrencyExchangeService currencyExchangeService;
     private final Environment environment;
-    
+
     @Autowired
     public CurrencyExchangeController(CurrencyExchangeService currencyExchangeService, Environment environment) {
         this.currencyExchangeService = currencyExchangeService;
